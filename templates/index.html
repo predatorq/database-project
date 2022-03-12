@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="{% url 'check' %}" method="post">
+    {% csrf_token %}
+    欢迎访问JY数据库，您想要做什么：<br />
+    <input name="action" id="add" type="radio" value="add" />
+    <label for="add">增加项目</label>
+    <input name="action" id="delete" type="radio" value="delete" />
+    <label for="delete">删除项目</label>
+    <input name="action" id="change" type="radio" value="change" />
+    <label for="change">更改项目</label>
+    <input name="action" id="check" type="radio" value="check" />
+    <label for="check">查询项目</label></br>
+    <input type="submit" value="提交" />
+</form>
+<h1>{{ hello }}</h1>
+</body>
+</html>

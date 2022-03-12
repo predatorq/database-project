@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<h1>现有数据库内容：</h1>
+{% for book in books %}
+<p>{{ book.book_id }}
+{{ book.book_name }}
+{{ book.book_isbn }}
+{{ book.book_author }}
+{{ book.book_publisher }}
+{{ book.book_price }}
+{{ book.interview_times }}</p>
+{% endfor %}
+<h1>删除内容：</h1>
+<form action="" method="post"> 
+    {% csrf_token %}
+    <label>book_id</label> 
+    <input name="id" type="text" size="22" /><br /> 
+    <label>book_name</label> 
+    <input name="name" type="text" size="22" /><br /> 
+    <input name="" type="submit" value="提交" /> 
+    </form> 
+
+<h1>{{cond}}</h1>
+<button onclick="window.location.href='..'" type="button" id="add">返回</button>
+</body>
+</html>
