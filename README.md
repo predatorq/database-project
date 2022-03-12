@@ -10,6 +10,8 @@ python manage.py runserver
 
 构建一个web程序，实现对图书借阅数据库系统JY的图书表的增删改查。
 
+本项目使用SQL server + Django构建。
+
 在目录下使用代码创建项目：
 
 ```powershell
